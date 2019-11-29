@@ -29,3 +29,9 @@ $dn-ng-theme: mat-light-theme($dn-ng-primary, $dn-ng-accent, $dn-ng-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+footer {
+    padding: 12px;
+    background: mat-color($dn-ng-primary, default);
+    color: mat-color($dn-ng-primary, default-contrast);
+}

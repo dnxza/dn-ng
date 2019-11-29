@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+footer {
+    text-align: center;
+}
+
+.content[role=main] {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.page + *{
+    flex-grow: 1;
+    padding: 16px 32px 32px 32px;
+}
+
+.content[role=content] {
+    margin: 12px;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
