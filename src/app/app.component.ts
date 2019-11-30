@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter, map } from 'rxjs/operators';
-
 
 @Component({
   selector: 'app-root',
@@ -18,7 +16,8 @@ export class AppComponent implements OnInit {
   constructor(
     private titleService: Title,
     private router: Router,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute
+    ) { }
 
   ngOnInit() {
     this.router
@@ -35,5 +34,4 @@ export class AppComponent implements OnInit {
         this.titleService.setTitle(ttl);
       });
   }
-
 }

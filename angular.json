@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dn-ng",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,6 +62,54 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "production-th": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.th.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "outputPath": "dist/th/",
+              "i18nFile": "src/locale/messages.th.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "th",
+              "baseHref": "/th/"
+            },
+            "th": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.th.ts"
+                }
+              ],
+              "aot": true,
+              "outputPath": "dist/th/",
+              "i18nFile": "src/locale/messages.th.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "th",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -73,6 +121,9 @@
           "configurations": {
             "production": {
               "browserTarget": "dn-ng:build:production"
+            },
+            "th": {
+              "browserTarget": "dn-ng:build:th"
             }
           }
         },
